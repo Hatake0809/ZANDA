@@ -1,0 +1,199 @@
+        <button style="position:fixed; color: white; font-size:larger;">Filitrele</button>
+        <br>
+        <div>
+            <p>Marka</p>
+            <hr>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">Asus</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">Lenova</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">Msı</label><br>
+        </div>
+        <br>
+        <div>
+            <p>İşlemci</p>
+            <hr>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">İntel</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">Amd</label><br>
+        </div>
+        <br>
+        <div>
+            <p>Ekran Kartı</p>
+            <hr>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">Nvidia</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">İntel</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">Amd</label><br>
+        </div>
+        <br>
+        <div>
+            <p>Ram</p>
+            <hr>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">8 Gb</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">16 Gb</label><br>
+            <input type="checkbox" id="myCheck" onclick="myFunction()"style="margin-left:15px"><label for="myCheck" style="margin:5px">32 Gb</label><br>
+        </div>
+
+
+        <div id="portfolio" style="margin-top:5% ; animation: slide 2s ease forwards;  animation-delay: calc(.2s * var(--i));">
+        <div class="container">
+            <h2 class="text-uppercase" style="color:white ; font-size:60px">
+                Elektronik
+            </h2>
+            <div class="portfolio-images" class="clearfix">
+
+                <div class="col" id="1">
+                    <?php 
+                        // SQL sorgusu
+                        require_once "database.php";
+                        $sql = "SELECT marka, işlemci, ekran_kartı, ram FROM elektronik WHERE id = '1'";
+                        $result = $conn->query($sql);
+                        // Veritabanından veri çekme
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                            $marka = $row["marka"];
+                            $işlemci = $row["işlemci"];
+                            $ekran_kartı = $row["ekran_kartı"];
+                            $ram = $row["ram"];
+                        }
+
+                    ?>
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <p style="position:absolute"><?php echo " " . $marka ?></p>
+                            <p style="position:absolute;margin-left:50px;"><?php echo " " . $işlemci ?></p>
+                            <p style="position:absolute;margin-left:100px;"><?php echo " " . $ekran_kartı ?></p>
+                            <p style="position:absolute;margin-left:150px;"><?php echo " " . $ram . "GB" ?></p>
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col" id="2">
+                    <?php 
+                        // SQL sorgusu
+                        require_once "database.php";
+                        $sql = "SELECT marka, işlemci, ekran_kartı, ram FROM elektronik WHERE id = '2'";
+                        $result = $conn->query($sql);
+                        // Veritabanından veri çekme
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                            $marka = $row["marka"];
+                            $işlemci = $row["işlemci"];
+                            $ekran_kartı = $row["ekran_kartı"];
+                            $ram = $row["ram"];
+                        }
+
+                    ?>
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <p style="position:absolute"><?php echo " " . $marka ?></p>
+                            <p style="position:absolute;margin-left:100px;"><?php echo " " . $işlemci ?></p>
+                            <p style="position:absolute;margin-left:175px;"><?php echo " " . $ekran_kartı ?></p>
+                            <p style="position:absolute;margin-left:225px;"><?php echo " " . $ram . "GB" ?></p>
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="portfolio-item">
+                        <a href="">
+                            <img class="img-fluid-p" src="image/Kısayol/1.png" alt="">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

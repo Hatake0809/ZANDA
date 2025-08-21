@@ -1,0 +1,172 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    padding: 50px;
+    background-color: #4158D0;
+    background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+}
+
+.container {
+    max-height: 800px;
+    width: 600px;
+    overflow: hidden;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 10px 5px 5px rgb(78, 78, 78);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.596);
+    margin-bottom: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slide .5s;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+.form-btn {
+    display: flex;
+    font-size: 35px;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    justify-content: center;
+}
+
+h1,
+a {
+    text-align: center;
+}
+
+.form-group {
+    width: 400px;
+    margin-bottom: 20px;
+    padding: auto;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.zanda_logo {
+    position: relative;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-btn input[type="submit"] {
+    background-image: linear-gradient(45deg, #103ce7, #64e9ff, #103ce7);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-position 0.5s, color 0.5s;
+    background-size: 200%;
+    color: white;
+    box-shadow: none !important;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-btn input[type="submit"]:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-btn input[type="submit"]:hover::after,
+.form-btn input[type="submit"]:hover::before {
+    background-position: 100% 0;
+}
+
+.btn {
+
+    background-image: linear-gradient(45deg, #103ce7, #64e9ff, #103ce7);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-position 0.5s, color 0.5s;
+    background-size: 200%;
+    color: white;
+    box-shadow: none !important;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+
+.btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover::after,
+.btn:hover::before {
+    background-position: 100% 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+

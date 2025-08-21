@@ -1,0 +1,517 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+
+    background-color: #0c1022;
+    background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.navbar a.active,
+.navbar a:hover {
+
+    background: linear-gradient(45deg, #103ce7, #64e9ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    animation: slideTop 1s ease forwards;
+}
+
+.search-box {
+    position: relative;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    transition: width 0.4s ease-in-out;
+    /* Animation for width */
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    /* Animation for icon color */
+}
+
+/* Animation when input is focused */
+input[type="text"]:focus {
+    width: 600px;
+}
+
+input[type="text"]:focus+button {
+    color: blue;
+    /* Change color of icon when input is focused */
+}
+
+
+.kategori {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.kategori span {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.kategori span.active,
+.kategori span:hover {
+
+    background: linear-gradient(45deg, #103ce7, #64e9ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+
+span:hover {
+    cursor: pointer;
+}
+
+/* Alt menüyü gizle */
+.alt-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Kategori üzerine gelindiğinde alt menüyü göster */
+.kategori:hover .alt-menu {
+    display: block;
+}
+
+/* Alt menü öğelerinin stillemesi */
+.alt-menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 8px 12px;
+}
+
+/* Alt menü öğelerinin hover stili */
+.alt-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.product {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes slideTop {
+
+    0% {
+
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+
+
+    }
+
+}
+
+@keyframes slideRight {
+
+    0% {
+
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateX(0);
+
+
+    }
+
+}
+
+@keyframes slideLeft {
+
+    0% {
+
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateX(0);
+
+
+    }
+
+}
+
+
+
+@keyframes slideBottom {
+
+    0% {
+
+        opacity: 0;
+        transform: translateY(-100px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+
+
+    }
+
+}
+
+
+
+@keyframes slide {
+
+    0% {
+
+        opacity: 0;
+        transform: translate(0);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translate(0);
+
+
+    }
+
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatImage {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-24px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes circleRotate {
+
+    0% {
+
+        transform: rotate(0);
+
+    }
+
+
+    100% {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (max-width: 1155px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    .navbar a {
+
+        font-size: 12px;
+
+    }
+
+    .kategori {
+
+        font-size: 12px;
+
+    }
+
+    input[type="text"]:focus {
+        width: 300px;
+    }
+
+}
+
+
+
+.kategori_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 40rem;
+    font-family: "Roboto", sans-serif;
+    transition: 0.25s;
+    background: transparent;
+    margin-top: 1%;
+    z-index: 200;
+
+
+}
+
+body .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 900px;
+    width: 900px;
+    height: 400px;
+    margin-top: -14rem;
+
+
+
+}
+
+body .options .option {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+}
+
+.option:nth-child(1) {
+    --defaultBackground: #ed5565;
+}
+
+.option:nth-child(2) {
+    --defaultBackground: #fc6e51;
+}
+
+.option:nth-child(3) {
+    --defaultBackground: #ffce54;
+}
+
+.option:nth-child(4) {
+    --defaultBackground: #2ecc71;
+}
+
+.option:nth-child(5) {
+    --defaultBackground: #5d9cec;
+}
+
+.option:nth-child(6) {
+    --defaultBackground: #ac92ec;
+}
+
+.option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 40px;
+    background-size: auto 100%;
+}
+
+.option.active .label1 {
+    bottom: 20px;
+    left: 20px;
+}
+
+.option.active .label1 .info>div {
+    left: 0px;
+    opacity: 1;
+}
+
+.option:not(.active) {
+    flex-grow: 1;
+    border-radius: 30px;
+}
+
+.option:not(.active) .label1 {
+    bottom: 10px;
+    left: 10px;
+}
+
+.option:not(.active) .label1 .info>div {
+    left: 20px;
+    opacity: 0;
+}
+
+.label1 {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+}
